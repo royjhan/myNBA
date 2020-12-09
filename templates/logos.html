@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Logos
+{% endblock %}
+
+{% block main %}
+    <table>
+        <col width="500px"/>
+        <col width="500px"/>
+        <tr><td><h1>Logos</h1>
+        <form class="form-inline my-2 my-lg-0" style="padding-left:110px;padding-bottom:30px" action="/logos" method="post">
+            <input id="logosearchbox" class="form-control mr-sm-2" type="search" placeholder="Search for a team" name="search" autocomplete="off">
+            <button id="logosubmitbutton" class="btn btn-outline-success my-2 my-sm-0" type="submit" disabled>Search</button>
+        </form>
+            <script>
+                document.querySelector("#logosearchbox").onkeyup = function() {
+                    if (document.querySelector("#logosearchbox").value === "") {
+                        document.querySelector("#logosubmitbutton").disabled = true;
+                    } else {
+                        document.querySelector("#logosubmitbutton").disabled = false;
+                    }
+                };
+            </script></td>
+        <td><h1>{{ team }}</h1></td></tr>
+        <tr><td></td>
+            <td><img src={{ imglink }} style="position:relative;top:-30px"></td></tr>
+            <tr><td></td>
+            {% if team != "" %}
+                <td><p style="color:white">Right click image to download</p></td>
+            {% else %}
+                <td></td>
+            {% endif %}
+            </tr>
+    </table>
+{% endblock %}

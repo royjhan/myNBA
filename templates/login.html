@@ -1,0 +1,28 @@
+{% extends "welcome.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block content %}
+
+    <h1>Log In</h1>
+        <form action="/login" method="post">
+            <div class="form-group">
+                <input autocomplete="off" autofocus class="form-control" name="username" placeholder="Username" type="text" {{ required[0] }}>
+            </div>
+            {% if required[0] == "required" %}
+                <p class="error">{{ errormessage }}</p>
+            {% endif %}
+            <div class="form-group">
+                <input class="form-control" name="password" placeholder="Password" type="password" {{ required[1] }}>
+            </div>
+            {% if required[1] == "required" %}
+                <p class="error">{{ errormessage }}</p>
+            {% elif required[2] == "required" %}
+                <p class="error">Invalid login information</p>
+            {% endif %}
+        <button class="btn btn-outline-light" type="submit">Log In</button>
+        </form>
+
+{% endblock %}

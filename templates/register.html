@@ -1,0 +1,36 @@
+{% extends "welcome.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block content %}
+    
+    <h1>Register</h1>
+        <form action="/register" method="post">
+            <div class="form-group">
+                <input autocomplete="off" autofocus class="form-control" name="username" placeholder="Username" type="text" {{ required[0] }}>
+            </div>
+            {% if required[0] == "required" %}
+                <p class="error">{{ errormessage }}</p>
+            {% elif required[1] == "required" %}
+                <p class="error">Username already exists</p>
+            {% endif %}
+            <div class="form-group">
+                <input class="form-control" name="password" placeholder="Password" type="password" {{ required[2] }}>
+            </div>
+            {% if required[2] == "required" %}
+                <p class="error">{{ errormessage }}</p>
+            {% endif %}
+            <div class="form-group">
+                <input class="form-control" name="confirmation" placeholder="Confirm Password" type="password" {{ required [3] }}>
+            </div>
+            {% if required[3] == "required" %}
+                <p class="error">{{ errormessage }}</p>
+            {% elif required[4] == "required" %}
+                <p class="error">Passwords do not match</p>
+            {% endif %}
+            <button class="btn btn-outline-light" type="submit">Register</button>
+        </form>
+    
+{% endblock %}

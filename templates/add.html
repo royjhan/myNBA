@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Search
+{% endblock %}
+
+{% block main %}
+    <table style="margin-left:auto;margin-right:auto">
+        <form action="/" method="post">
+        <tr><td><h1>{{ searchresult[0] }}</h1></td></tr>
+        <tr><td><img src={{ searchresult[1] }} style="padding-bottom:10%;width:180px;height:auto"></td></tr>
+        <tr><td>
+            <button id="add" class="btn btn-outline-success" type="submit">Add</button>
+            </td></tr>
+        </form>
+    </table>
+{% endblock %}
