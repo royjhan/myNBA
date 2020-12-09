@@ -1,0 +1,145 @@
+.card 
+{
+    position: relative;
+    top: 0;
+    left: 0;
+    background: transparent;
+    border: none;
+}
+.frame 
+{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 275px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.star
+{
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    width: 150px;
+    height: auto;
+
+}
+.indeximg
+{
+    width: 40px;
+    height: auto;
+}
+
+.indextext
+{
+    color: white;
+}
+
+.lock
+{
+    width: 4em;
+    height: 4em;
+    fill: white;
+    padding-bottom: 1em;
+    text-align: left;
+}
+
+.lock-text
+{
+    color: white;
+}
+
+nav #navbar .navbar-nav .nav-link 
+{
+    color: white;
+}
+
+nav .navbar-brand
+{
+    /* size for brand */
+    font-size: xx-large;
+}
+
+/* colors for brand */
+
+nav .navbar-brand .red
+{
+    color: red;
+}
+
+nav .navbar-brand .white
+{
+    color: white;
+}
+
+nav #navbar
+{
+    padding-bottom: 0.2cm;
+}
+
+nav .navbar-brand .nav-logo
+{
+    width: 25px;
+    height: auto;
+}
+
+main .form-control
+{
+    /* center form controls */
+    display: inline-block;
+
+    /* override Bootstrap's 100% width for form controls */
+    width: auto;
+}
+
+main
+{
+    /* scroll horizontally as needed */
+    overflow-x: auto;
+
+    /* center contents */
+    text-align: center;
+}
+
+main img
+{
+    /* constrain images on small screens */
+    max-width: 100%;
+}
+
+body 
+{
+    background-image: url("cleanblue.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+h1
+{
+    color: white;
+    text-align: center;
+    margin-bottom: 1cm;
+}
+
+h3
+{
+    color: white;
+    text-align: center;
+}
+
+:required
+{
+    border-color: red;
+}
+
+.error
+{
+    color: red;
+}
+
+table
+{
+    margin-left: auto;
+    margin-right: auto;
+}
