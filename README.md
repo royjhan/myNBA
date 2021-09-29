@@ -4,6 +4,8 @@ For my CS50x final project, I created the ultimate web-based application for NBA
 ## Description
 The CS50 library was used in this project, which included features such as SQL and Beautiful Soup. The application is based on a Flask framework, and was written with HTML, CSS, and JavaScript.
 
+https://www.youtube.com/watch?v=c2jeVXx9fjs
+
 ## Running Code
 To run the application, use these commands:
 
